@@ -7,13 +7,15 @@ import { TodoForm } from "./types/todo-form.type";
 import { NonNullableFormBuilder } from "@angular/forms";
 import { Todo } from "./types/todo.type";
 import { v4 as uuidv4 } from 'uuid';
+import { BannerComponent } from "./components/banner/banner.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TodoRowComponent, AsyncPipe, DialogComponent],
+  imports: [RouterOutlet, TodoRowComponent, AsyncPipe, DialogComponent, BannerComponent],
   template: `
     <div class="wrapper flex flex-col gap-2 items-center">
+      <app-banner></app-banner>
       <div>
         <button (click)="openDialog()">Create new item</button>
       </div>
