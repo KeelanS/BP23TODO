@@ -13,7 +13,7 @@ import { TodoForm } from "../../types/todo-form.type";
       <button (click)="closeDialog.emit()" class="px-4 py-2">X</button>
     </div>
     <div class="form-wrapper">
-      <form [formGroup]="form" (ngSubmit)="onSubmit.emit()" class="m-5">
+      <form [formGroup]="form" (ngSubmit)="submitForm.emit()" class="m-5">
         <div class="mb-4 flex flex-col">
           <label class="mb-2" for="content">
             Content
@@ -37,5 +37,5 @@ export class DialogComponent {
   @Input() form: TodoForm;
 
   @Output() closeDialog = new EventEmitter();
-  @Output() onSubmit = new EventEmitter();
+  @Output() submitForm = new EventEmitter();
 }

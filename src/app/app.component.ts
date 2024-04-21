@@ -29,7 +29,7 @@ import { BannerComponent } from "./components/banner/banner.component";
         }
       </div>
       <dialog type="modal" id="dialog" #dialog>
-        <app-dialog [form]="form" (closeDialog)="closeDialog()" (onSubmit)="onSubmit()"/>
+        <app-dialog [form]="form" (closeDialog)="closeDialog()" (submitForm)="onSubmit()"/>
       </dialog>
     </div>
   `,
